@@ -10,7 +10,7 @@ export async function POST(req: Request) {
   const { prompt } = await req.json()
 
   // Initialize the model
-  const model = genAI.getGenerativeModel({ model: "gemini-2.0-pro-exp-02-05" })
+  const model = genAI.getGenerativeModel({ model: "gemini-2.0-flash-lite" })
 
   // Start the generation
   const response = await model.generateContent({
