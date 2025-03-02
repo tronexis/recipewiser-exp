@@ -95,13 +95,14 @@ export function GenerateRecipe() {
           })}
         >
           <div className="md:flex flex-col">
-            {isLoading || isGeneratingImage || !recipeImage ? (
+            {(isLoading || isGeneratingImage) && (
               <div className="mb-6">
-                <Skeleton className="size-full w-1/2 mx-auto aspect-square rounded-lg" />
+                <Skeleton className="size-full w-full mx-auto aspect-video rounded-lg" />
               </div>
-            ) : (
+            )}{" "}
+            {!isLoading && !isGeneratingImage && recipe && recipeImage && (
               <div className="mb-6">
-                <Avatar className="size-full w-1/2 mx-auto aspect-square rounded-lg">
+                <Avatar className="size-full w-full mx-auto aspect-video rounded-lg">
                   <AvatarImage
                     src={recipeImage}
                     alt="Generated recipe"
@@ -110,7 +111,9 @@ export function GenerateRecipe() {
                 </Avatar>
               </div>
             )}
-            {!isLoading && recipe && <RecipeCard recipe={recipe} />}
+            {!isLoading && recipe && !isGeneratingImage && (
+              <RecipeCard recipe={recipe} />
+            )}
             {(isLoading || isGeneratingImage) && <RecipeCardSkeleton />}
           </div>
         </div>

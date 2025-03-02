@@ -17,7 +17,7 @@ export async function POST(req: Request) {
       model: "black-forest-labs/FLUX.1-schnell-Free",
       prompt: enhancedPrompt,
       width: 1024,
-      height: 1024,
+      height: 768,
       steps: 4,
       n: 1,
       response_format: "url",
