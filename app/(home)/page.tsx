@@ -15,13 +15,13 @@ export default async function IndexPage() {
       <PageHeader>
         <RecipesCounter />
         <PageHeaderHeading>
-          Say goodbye to mealtime indecision with
+          Start generating recipes with
           <span className="bg-gradient-to-r from-violet-500 to-teal-300 bg-clip-text text-transparent">
-            {" Chef Genie"}
+            {" Recipewiser"}
           </span>
         </PageHeaderHeading>
         <PageHeaderDescription>
-          Free. Open Source. Recipe generator powered by OpenAI and ChatGPT.
+          Recipe generator powered by AI.
         </PageHeaderDescription>
       </PageHeader>
       <GenerateRecipe />

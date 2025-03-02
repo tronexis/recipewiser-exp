@@ -20,7 +20,7 @@ export const metadata: Metadata = {
   description: siteConfig.description,
   keywords: [
     "Chef GPT",
-    "Chef Genie",
+    "Recipewiser",
     "Recipe Generator",
     "Recipe ChatGPT",
     "Recipe AI",

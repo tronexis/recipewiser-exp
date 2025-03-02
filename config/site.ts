@@ -1,13 +1,13 @@
 export type SiteConfig = typeof siteConfig
 
 export const siteConfig = {
-  name: "Chef Genie",
+  name: "Recipewiser",
   url: "https://chef-genie.app",
   ogImage: "https://chef-genie.app/og.png",
   description: "An open-source recipe generator powered by OpenAi and ChatGPT.",
   mainNav: [
     {
-      title: "Chef Genie Homepage",
+      title: "Recipewiser Homepage",
       href: "/",
     },
   ],

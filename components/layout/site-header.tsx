@@ -92,7 +92,7 @@ export function SiteHeader({ user }: SiteHeaderProps) {
             ) : (
               <>
                 <Link href="/sign-in">
-                  <Button size="xs" className="mx-1 md:mx-3">
+                  <Button size="xs" className="mx-1 md:mx-3 hidden">
                     Sign In
                   </Button>
                 </Link>
@@ -102,6 +102,7 @@ export function SiteHeader({ user }: SiteHeaderProps) {
               href={siteConfig.links.github}
               target="_blank"
               rel="noreferrer"
+              className="hidden"
             >
               <div
                 className={buttonVariants({
