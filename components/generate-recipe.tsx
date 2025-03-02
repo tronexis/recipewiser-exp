@@ -18,7 +18,7 @@ export function GenerateRecipe() {
   const [recipe, setRecipe] = useState<Recipe | null>(null)
 
   const { complete, isLoading } = useCompletion({
-    api: "/api/generate-recipe",
+    api: "/api/generate-recipe-gemini",
     onFinish: () => {
       setIsRecipeVisible(true)
     },
@@ -34,6 +34,7 @@ export function GenerateRecipe() {
     async (values: FormData, e: React.FormEvent) => {
       const prompt = generatePrompt(values)
       const completion = await complete(prompt)
+      console.log({ completion })
       setFormValues(values)
       if (!completion) throw new Error("Failed to generate recipe. Try again.")
       try {
