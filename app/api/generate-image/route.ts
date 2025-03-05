@@ -11,7 +11,7 @@ export async function POST(req: Request) {
     const { prompt } = await req.json()
 
     // Enhance the prompt for better food photography results
-    const enhancedPrompt = `A professional food photography shot of ${prompt} on a dark pink dish on a gradient background from vibrant magenta pink to vibrant tangerine orange. The dish should look appetizing and be well-lit, styled like a high-end restaurant menu photo. Show the complete dish with garnishes and plating details.`
+    const enhancedPrompt = `A professional food photography centered shot of ${prompt} on a dark pink dish on a gradient background from vibrant magenta pink to vibrant tangerine orange. The dish should look appetizing and be well-lit, styled like a high-end restaurant menu photo. Show the complete dish with garnishes and plating details.`
 
     const response = await together.images.create({
       model: "black-forest-labs/FLUX.1-schnell-Free",
