@@ -16,7 +16,7 @@ export default async function IndexPage() {
         <RecipesCounter />
         <PageHeaderHeading>
           Start generating recipes with
-          <span className="bg-gradient-to-r from-violet-500 to-teal-300 bg-clip-text text-transparent">
+          <span className="bg-gradient-to-r from-[#ED068A] to-[#FE734C] bg-clip-text text-transparent">
             {" Recipewiser"}
           </span>
         </PageHeaderHeading>
