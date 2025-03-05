@@ -4,7 +4,7 @@ import React, { useCallback, useEffect, useState } from "react"
 import { useCompletion } from "ai/react"
 import { toast } from "sonner"
 
-import { defaultValues, Recipe, type FormData } from "@/types/types"
+import { defaultValues, type FormData, type Recipe } from "@/types/types"
 import { saveGeneration } from "@/lib/actions"
 import { generatePrompt } from "@/lib/generate-prompt"
 import { cn } from "@/lib/utils"
@@ -97,12 +97,12 @@ export function GenerateRecipe() {
           <div className="md:flex flex-col">
             {(isLoading || isGeneratingImage) && (
               <div className="mb-6">
-                <Skeleton className="size-full w-full mx-auto aspect-video rounded-lg" />
+                <Skeleton className="size-full w-full mx-auto aspect-[4/3] rounded-lg" />
               </div>
             )}{" "}
             {!isLoading && !isGeneratingImage && recipe && recipeImage && (
               <div className="mb-6">
-                <Avatar className="size-full w-full mx-auto aspect-video rounded-lg">
+                <Avatar className="size-full w-full mx-auto aspect-[4/3] rounded-lg">
                   <AvatarImage
                     src={recipeImage}
                     alt="Generated recipe"
