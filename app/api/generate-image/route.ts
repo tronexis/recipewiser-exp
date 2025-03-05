@@ -8,10 +8,12 @@ const together = new Together({
 
 export async function POST(req: Request) {
   try {
-    const { prompt } = await req.json()
+    const { recipe } = await req.json()
 
     // Enhance the prompt for better food photography results
-    const enhancedPrompt = `A professional food photography centered shot of ${prompt} on a dark pink dish on a gradient background from vibrant magenta pink to vibrant tangerine orange. The dish should look appetizing and be well-lit, styled like a high-end restaurant menu photo. Show the complete dish with garnishes and plating details.`
+    const enhancedPrompt = `A professional food photography shot of ${recipe.title} arranged perfectly on a dark-pink dishware. The background transitions from vibrant magenta pink to vibrant tangerine orange in a smooth gradient. ${recipe.description} The dish should look appetizing and be well-lit, styled like a high-end restaurant menu photo. Show the complete dish with garnishes and plating details. The ingredients should be clearly visible and appetizingly styled, with careful attention to color, texture and composition. The lighting should be bright and even, highlighting the natural colors and textures of each ingredient.`
+
+    console.log({ enhancedPrompt })
 
     const response = await together.images.create({
       model: "black-forest-labs/FLUX.1-schnell-Free",

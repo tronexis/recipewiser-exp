@@ -4,7 +4,7 @@ export const siteConfig = {
   name: "Recipewiser",
   url: "https://chef-genie.app",
   ogImage: "https://chef-genie.app/og.png",
-  description: "An open-source recipe generator powered by OpenAi and ChatGPT.",
+  description: "A recipe generator powered by AI.",
   mainNav: [
     {
       title: "Recipewiser Homepage",

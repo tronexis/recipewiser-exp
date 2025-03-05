@@ -51,7 +51,7 @@ export function GenerateRecipe() {
           const imageResponse = await fetch("/api/generate-image", {
             method: "POST",
             headers: { "Content-Type": "application/json" },
-            body: JSON.stringify({ prompt: result.title }),
+            body: JSON.stringify({ recipe: result }),
           })
 
           if (!imageResponse.ok) {
