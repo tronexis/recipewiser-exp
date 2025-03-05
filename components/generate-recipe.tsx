@@ -87,7 +87,10 @@ export function GenerateRecipe() {
             "md:flex md:w-1/3": isLoading || isRecipeVisible,
           })}
         >
-          <RecipeForm onSubmit={onSubmit} isLoading={isLoading} />
+          <RecipeForm
+            onSubmit={onSubmit}
+            isLoading={isLoading || isGeneratingImage}
+          />
         </div>
         <div
           className={cn({
